@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:staged": "jest --passWithNoTests"
+    "test:staged": "jest --passWithNoTests --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rafael Xavier",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.0",
