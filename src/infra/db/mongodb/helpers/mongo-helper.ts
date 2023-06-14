@@ -15,5 +15,18 @@ export const MongoHelper = {
 
   getCollection (name: string): Collection {
     return this.client.db().collection(name)
+  },
+
+  map: async <T>(collection: any, data: any): Promise<T> => {
+    const _id = collection.insertedId.id[0]
+
+    return await new Promise<T>(resolve => {
+      const mappedObject: T = {
+        id: _id.toString(),
+        ...data
+      }
+
+      resolve(mappedObject)
+    })
   }
 }
