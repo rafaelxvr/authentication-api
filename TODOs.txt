@@ -1,2 +1,0 @@
-# Criar interface IUseCase com método único Run
-# Criar interface IEntity com validações de entidades internamente
