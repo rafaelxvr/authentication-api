@@ -1,7 +1,7 @@
 {
-  "name": "clean-api",
+  "name": "pex-authentication-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "PEX.Auth é uma API baseada em SOLID, construída utilizando Domain Driven Design (DDD) e Clean Architecture",
   "main": "index.js",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
@@ -14,8 +14,8 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "Rafael Xavier",
-  "license": "ISC",
+  "author": "RTI Soluções em Software",
+  "license": "MIT",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.7",
     "@types/bcrypt": "^5.0.0",
