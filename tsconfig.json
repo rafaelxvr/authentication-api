@@ -1,12 +1,18 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
+        "outDir": "dist",
         "module": "commonjs",
         "target": "ES2022",
         "esModuleInterop": true,
-        "allowJs": true,
         "forceConsistentCasingInFileNames": true,
         "strictNullChecks": true,
         "strict": true
-    }
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ]
 }
