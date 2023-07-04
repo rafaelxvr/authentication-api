@@ -5,7 +5,7 @@ export const MongoHelper = {
   uri: null as unknown as string,
 
   async connect (uri: string): Promise<void> {
-    this.uri = uri
+    this.uri = encodeURIComponent(uri)
     this.client = await MongoClient.connect(uri)
   },
 
