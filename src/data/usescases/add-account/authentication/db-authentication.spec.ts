@@ -56,6 +56,6 @@ describe('DbAuthentication UseCase', () => {
 
     const promise = sut.auth(makeFakeAuthentication())
 
-    expect(promise).rejects.toThrow()
+    void expect(promise).rejects.toThrow()
   })
 })
