@@ -15,7 +15,7 @@ services:
     image: auth-api
     command: npm start
     volumes:
-      - ./dist:usr/src/auth-api/dist
+      - ./dist:/usr/src/auth-api/dist
     ports:
       - "6060:6060"
     links:
