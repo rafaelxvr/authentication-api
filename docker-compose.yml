@@ -10,10 +10,10 @@ services:
       - "27017:27017"
   api:
     container_name: api-container
-    build: .
+    image: node:18
+    working_dir: /usr/src/auth-api
     restart: always
-    image: auth-api
-    command: npm run debug
+    command: bash -c "npm install --omit=dev && npm run debug"
     volumes:
       - ./dist:/usr/src/auth-api/dist
       - ./package.json:/usr/src/auth-api/package.json
