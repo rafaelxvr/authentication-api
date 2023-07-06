@@ -15,7 +15,7 @@ services:
     restart: always
     command: bash -c "npm install --omit=dev && npm run debug"
     volumes:
-      - ./dist:/usr/src/auth-api/dist
+      - ./dist/:/usr/src/auth-api/dist/
       - ./package.json:/usr/src/auth-api/package.json
     ports:
       - "6060:6060"

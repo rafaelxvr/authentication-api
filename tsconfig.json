@@ -7,7 +7,8 @@
         "forceConsistentCasingInFileNames": true,
         "strictNullChecks": true,
         "strict": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "rootDir": "src"
     },
     "include": [
         "src"
