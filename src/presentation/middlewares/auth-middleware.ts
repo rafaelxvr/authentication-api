@@ -23,6 +23,6 @@ export class AuthMiddleware implements Middleware {
       return await Promise.resolve(error)
     }
 
-    return ok('Authorized')
+    return ok({ accountId: account.id })
   }
 }
