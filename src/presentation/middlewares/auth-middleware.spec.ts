@@ -12,10 +12,14 @@ const makeFakeAccount = (): AccountModel => ({
   password: 'hashed_password'
 })
 
-class LoadAccountByTokenStub implements LoadAccountByToken {
-  async load (accessToken: string, role?: string): Promise<AccountModel> {
-    return await Promise.resolve(makeFakeAccount())
+const makeLoadAccountByToken = (): LoadAccountByToken => {
+  class LoadAccountByTokenStub implements LoadAccountByToken {
+    async load (accessToken: string, role?: string): Promise<AccountModel> {
+      return await Promise.resolve(makeFakeAccount())
+    }
   }
+
+  return new LoadAccountByTokenStub()
 }
 
 interface SutTypes {
@@ -24,7 +28,7 @@ interface SutTypes {
 }
 
 const makeSut = (): SutTypes => {
-  const loadAccountByTokenStub = new LoadAccountByTokenStub()
+  const loadAccountByTokenStub = makeLoadAccountByToken()
   const sut = new AuthMiddleware(loadAccountByTokenStub)
   return {
     sut,
