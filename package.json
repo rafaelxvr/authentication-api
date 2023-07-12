@@ -1,7 +1,7 @@
 {
-  "name": "clean-api",
+  "name": "pex-authentication-api",
   "version": "1.1.2",
-  "description": "",
+  "description": "PEX.Auth é uma API baseada em SOLID, construída utilizando Domain Driven Design (DDD) e Clean Architecture",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
