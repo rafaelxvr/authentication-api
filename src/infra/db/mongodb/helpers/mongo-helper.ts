@@ -3,9 +3,11 @@ import { type Collection, MongoClient, ObjectId } from 'mongodb'
 export const MongoHelper = {
   client: null as unknown as MongoClient,
   uri: null as unknown as string,
+  dbName: null as unknown as string,
 
-  async connect (uri: string): Promise<void> {
+  async connect (dbName: string, uri: string): Promise<void> {
     this.uri = uri
+    this.dbName = dbName
     this.client = await MongoClient.connect(uri)
   },
 
@@ -15,10 +17,10 @@ export const MongoHelper = {
 
   async getCollection (name: string): Promise<Collection> {
     if (!this.client) {
-      await this.connect(this.uri)
+      await this.connect(this.dbName, this.uri)
     }
 
-    return this.client.db().collection(name)
+    return this.client.db(this.dbName).collection(name)
   },
 
   map: async <T>(data: any): Promise<T> => {
