@@ -17,7 +17,7 @@
     "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
-  "author": "Rafael Xavier",
+  "author": "RTI Software Solutions",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.7",
