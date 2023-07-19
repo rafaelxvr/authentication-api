@@ -19,7 +19,7 @@ PEX.Auth é uma API baseada em SOLID, construída utilizando Domain Driven Desig
 - SOLID: Princípios de programação orientada a objetos para construção de um código limpo e de fácil manutenção.
 - Domain Driven Design (DDD): Metodologia de desenvolvimento de software que busca alinhar o código com o domínio do negócio.
 - Clean Architecture: Arquitetura de software que separa as preocupações em camadas, facilitando a manutenção e o teste do código.
-- Banco de Dados: [especificar o banco de dados utilizado, por exemplo, SQL Server, MySQL, etc.]
+- Banco de Dados: Foi utilizado MongoDB, em decorrência da necessidade de armazenamento de registros que não serão modificados com frequência.
 
 ## Arquitetura
 - Esboço da arquitetura em desenvolvimento.
@@ -27,7 +27,7 @@ PEX.Auth é uma API baseada em SOLID, construída utilizando Domain Driven Desig
 
 # PEX.Authentication API
 
-PEX.Auth is an API based on SOLID, built using Domain Driven Design (DDD) and Clean Architecture.
+PEX.Auth é uma API baseada em SOLID, construída seguindo os princípios de Domain Driven Design (DDD) e Clean Architecture.
 
 ## Instalação
 
