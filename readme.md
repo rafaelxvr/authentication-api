@@ -15,7 +15,7 @@ PEX.Auth é uma API baseada em SOLID, construída utilizando Domain Driven Desig
 - Node.js
 
 ## Princípios
-- Test Driven Development (TDD): Abordagem de desenvolvimento que prioriza a criação de testes antes da implementação do código (para mais detalhes, ler ![Manifesto TDD](https://tddmanifesto.com/getting-started/)).
+- Test Driven Development (TDD): Abordagem de desenvolvimento que prioriza a criação de testes antes da implementação do código (para mais detalhes, ler <https://tddmanifesto.com>).
 - SOLID: Princípios de programação orientada a objetos para construção de um código limpo e de fácil manutenção.
 - Domain Driven Design (DDD): Metodologia de desenvolvimento de software que busca alinhar o código com o domínio do negócio.
 - Clean Architecture: Arquitetura de software que separa as preocupações em camadas, facilitando a manutenção e o teste do código.
