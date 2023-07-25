@@ -11,6 +11,12 @@ export class AuthMiddleware implements Middleware {
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       const accessToken = httpRequest.headers?.['x-access-token']
+      const apiKey = httpRequest.headers?.['x-api-key']
+
+      if (this.role === 'application' && !apiKey) {
+        const error = forbidden(new AccessDeniedError())
+        return await Promise.resolve(error)
+      }
 
       if (!accessToken) {
         const error = forbidden(new AccessDeniedError())
