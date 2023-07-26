@@ -18,7 +18,7 @@ const makeFakeRequest = (): HttpRequest => ({
 
 const makeLoadAccountByToken = (): LoadAccountByToken => {
   class LoadAccountByTokenStub implements LoadAccountByToken {
-    async load (accessToken: string, role?: string): Promise<AccountModel> {
+    async load (token: string, role?: string): Promise<AccountModel> {
       return await Promise.resolve(makeFakeAccount())
     }
   }
@@ -43,6 +43,14 @@ const makeSut = (role?: string): SutTypes => {
 describe('Auth Middleware', () => {
   test('Should return 403 if no x-access-token exists in headers', async () => {
     const { sut } = makeSut()
+    const httpResponse = await sut.handle({})
+
+    expect(httpResponse).toEqual(forbidden(new AccessDeniedError()))
+  })
+
+  test('Should return 403 if role is application and no x-api-key exists in headers', async () => {
+    const role = 'application'
+    const { sut } = makeSut(role)
     const httpResponse = await sut.handle({})
 
     expect(httpResponse).toEqual(forbidden(new AccessDeniedError()))
