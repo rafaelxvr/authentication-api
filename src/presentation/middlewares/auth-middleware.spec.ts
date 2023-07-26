@@ -12,14 +12,13 @@ const makeFakeAccount = (): AccountModel => ({
 
 const makeFakeRequest = (): HttpRequest => ({
   headers: {
-    'x-access-token': 'any_token',
-    'x-api-key': 'any_key'
+    'x-access-token': 'any_token'
   }
 })
 
 const makeLoadAccountByToken = (): LoadAccountByToken => {
   class LoadAccountByTokenStub implements LoadAccountByToken {
-    async load (accessToken: string, role?: string): Promise<AccountModel> {
+    async load (token: string, role?: string): Promise<AccountModel> {
       return await Promise.resolve(makeFakeAccount())
     }
   }
@@ -52,11 +51,7 @@ describe('Auth Middleware', () => {
   test('Should return 403 if role is application and no x-api-key exists in headers', async () => {
     const role = 'application'
     const { sut } = makeSut(role)
-    const httpResponse = await sut.handle({
-      headers: {
-        'x-access-token': 'any_token'
-      }
-    })
+    const httpResponse = await sut.handle({})
 
     expect(httpResponse).toEqual(forbidden(new AccessDeniedError()))
   })
