@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Tg3yGArmQDJc4Jwj3Zgb" name="Page-1">
-        <mxGraphModel dx="1222" dy="270" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#424242" math="0" shadow="0">
+        <mxGraphModel dx="967" dy="268" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#424242" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -101,17 +101,16 @@
                 <mxCell id="26" value="SignUpController" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
                     <mxGeometry x="499.5" y="590" width="77" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="Validator" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
+                <mxCell id="28" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 10px;&quot;&gt;Validator&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=#FFFDFC;glass=0;" parent="1" vertex="1">
                     <mxGeometry x="124" y="400" width="77" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="29" value="BCrypt" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
-                    <mxGeometry x="201" y="180" width="77" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="30" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="30" target="29" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="49" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="30" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="278" y="195.00000000000006" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="30" value="BCryptAdapter" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
                     <mxGeometry x="322.75" y="180" width="77" height="30" as="geometry"/>
@@ -119,14 +118,13 @@
                 <mxCell id="46" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="31" target="19" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="31" target="32" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="48" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=6;" parent="1" source="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="593" y="195.00000000000006" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="31" value="AddUserMongoRepo" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
                     <mxGeometry x="461" y="180" width="77" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="MongoDB" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
-                    <mxGeometry x="593" y="180" width="77" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="230" y="780" width="365" height="170" as="geometry"/>
@@ -160,7 +158,7 @@
                 <mxCell id="51" value="Main" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="222.75" y="760" width="50" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" value="Express" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=none;glass=0;" parent="1" vertex="1">
+                <mxCell id="67" value="&lt;font style=&quot;font-size: 10px;&quot; color=&quot;#000000&quot;&gt;Express&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=#FFFFFF;glass=0;" parent="1" vertex="1">
                     <mxGeometry x="630" y="860" width="77" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="83" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=11;rounded=0;" parent="1" source="75" target="20" edge="1">
@@ -262,6 +260,15 @@
                 </mxCell>
                 <mxCell id="113" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;SignUpFactory&lt;/font&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="328" y="926" width="76.25" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Authentication Middleware&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="830" width="80" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 10px;&quot;&gt;Bcrypt&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=#FFFDFC;glass=0;" vertex="1" parent="1">
+                    <mxGeometry x="201" y="180" width="77" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 10px;&quot;&gt;MongoDB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBorderColor=none;strokeColor=default;fontSize=6;fillColor=#FFFDFC;glass=0;" vertex="1" parent="1">
+                    <mxGeometry x="595" y="179" width="77" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

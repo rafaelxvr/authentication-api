@@ -1,0 +1,47 @@
+name: CI
+
+on: pull_request
+
+env:
+  BRANCH_DEV: develop
+  BRANCH_STG: stage
+  BRANCH_PRD: main
+  ENV_DEV: dev
+  ENV_STG: stage
+  ENV_PRD: prod
+  NODE_VERSION: 18.x
+  TEST_COMMAND: test:ci
+  START_DOCKER_COMMAND: up
+  STOP_DOCKER_COMMAND: down
+
+jobs:
+  test-build:
+    name: Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install modules
+        run: npm i
+
+      - name: eslint
+        run: npx eslint . --ext .ts
+
+      - name: Run test with coverage
+        run: npm run ${{ env.TEST_COMMAND }}
+
+      - name: Start Containers
+        run: npm run ${{ env.START_DOCKER_COMMAND }}
+
+      - name: Stop Containers
+        run: npm run ${{ env.STOP_DOCKER_COMMAND }}
